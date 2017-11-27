@@ -24,6 +24,8 @@ func main() {
 			email:   "alex@vikings.com",
 		},
 	}
+
+	alex.updateName("Alexander")
 	alex.print()
 
 	var bob person
@@ -31,6 +33,10 @@ func main() {
 	bob.lastName = "King"
 	bob.contacts = contacts{email: "bob@gmail.com", zipCode: 90210}
 	bob.print()
+}
+
+func (p *person) updateName(name string) {
+	(*p).firstName = name
 }
 
 func (p person) print() {
