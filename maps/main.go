@@ -11,9 +11,16 @@ func main() {
 		"blue":  "#0000ff",
 	}
 	colors["white"] = "#ffffff"
-	fmt.Println(colors)
+
+	printMap(colors)
 
 	// Examples of another way of creating maps
 	// var colors1 = map[string]string
 	// colors2 := make(map[string]string)
+}
+
+func printMap(m map[string]string) {
+	for color, hex := range m {
+		fmt.Println(color + ": " + hex)
+	}
 }
